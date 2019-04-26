@@ -1,0 +1,5 @@
+dependencies {
+    compile project(":mini-account-domain")
+    compile project(":mini-account-dao")
+    compile project(":mini-account-service")
+}
