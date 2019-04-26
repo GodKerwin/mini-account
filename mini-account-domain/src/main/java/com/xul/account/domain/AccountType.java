@@ -8,13 +8,14 @@ import org.hibernate.annotations.Where;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 /**
  * 记账类型表
  * Created by lxu on 2018/12/11.
  */
 @Entity
-@Table(name = MiniAccountConstant.TABLE_NAME_PREFIX + "type")
+@Table(name = MiniAccountConstant.TABLE_NAME_PREFIX + "type", uniqueConstraints = {@UniqueConstraint(columnNames = {"typeName"})})
 @Where(clause = "delStatus = " + DelStatus.DEFAULT)
 public class AccountType {
 

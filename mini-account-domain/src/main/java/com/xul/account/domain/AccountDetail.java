@@ -15,7 +15,8 @@ import java.util.Date;
  * Created by lxu on 2018/12/11.
  */
 @Entity
-@Table(name = MiniAccountConstant.TABLE_NAME_PREFIX + "detail")
+@Table(name = MiniAccountConstant.TABLE_NAME_PREFIX + "detail",
+        indexes = {@Index(columnList = "username, accountYear, accountMonth, accountDay")})
 @Where(clause = "delStatus = " + DelStatus.DEFAULT)
 public class AccountDetail {
 

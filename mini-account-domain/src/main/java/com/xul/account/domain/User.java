@@ -12,7 +12,7 @@ import java.util.Date;
  * Created by lxu on 2018/12/11.
  */
 @Entity
-@Table(name = MiniAccountConstant.TABLE_NAME_PREFIX + "user")
+@Table(name = MiniAccountConstant.TABLE_NAME_PREFIX + "user", indexes = {@Index(columnList = "username"), @Index(columnList = "email"), @Index(columnList = "phone")})
 @Where(clause = "delStatus = " + DelStatus.DEFAULT)
 public class User extends BaseModel {
 
