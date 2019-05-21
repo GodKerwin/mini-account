@@ -1,8 +1,8 @@
 rootProject.name = 'mini-account'
 include 'mini-account-admin'
-include 'mini-account-web'
-include 'mini-account-service'
 include 'mini-account-dao'
 include 'mini-account-domain'
+include 'mini-account-service'
 include 'mini-account-support'
+include 'mini-account-web'
 
